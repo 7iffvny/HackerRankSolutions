@@ -1,0 +1,23 @@
+Solution
+
+if __name__ == '__main__':
+    
+    # setting variables
+    dict = []
+    second_lowest = []
+    scores = set()
+    
+    for _ in range(int(input())):
+        name = input()
+        score = float(input())
+        dict.append([name,score])
+        scores.add(score)
+        
+    second_lowest_score = sorted(scores)[1]
+    
+    for name, score in dict:
+        if score == second_lowest_score:
+            second_lowest.append(name)
+            
+    for name in sorted(second_lowest):
+        print(name, end="\n")
